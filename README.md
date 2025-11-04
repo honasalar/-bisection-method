@@ -64,5 +64,4 @@ By : hona salar mahmmud
 Stage : 2
 Numerical Analysis
 
-👤 Author: Milano
-📚 Numerical Analysis Student
+
