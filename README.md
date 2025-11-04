@@ -47,7 +47,7 @@ x ≈ 2.09
 
 bisection.ipynb — Python code
 
-Google Sheet link (included below)
+Google Sheet link (included above)
 
 Readme explanation
 
