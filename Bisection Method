@@ -1,0 +1,74 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMMmgHXNFDfCoPA/vkYsVVm",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/honasalar/-bisection-method/blob/main/Bisection%20Method\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "StpyZ4yyZ0lO",
+        "outputId": "b5544ff5-8bc5-4988-d56b-c2e07649f4ea"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Root ≈ 2.0945515632629395\n"
+          ]
+        }
+      ],
+      "source": [
+        "def f(x):\n",
+        "    return x**3 - 2*x - 5  # Unique equation\n",
+        "\n",
+        "def bisection(a, b, tol=1e-6, max_iter=50):\n",
+        "    if f(a)*f(b) >= 0:\n",
+        "        print(\"Invalid interval\")\n",
+        "        return None\n",
+        "\n",
+        "    for i in range(max_iter):\n",
+        "        mid = (a + b) / 2\n",
+        "        if abs(f(mid)) < tol:\n",
+        "            return mid\n",
+        "\n",
+        "        if f(a)*f(mid) < 0:\n",
+        "            b = mid\n",
+        "        else:\n",
+        "            a = mid\n",
+        "\n",
+        "    return mid\n",
+        "\n",
+        "root = bisection(1, 3)\n",
+        "print(\"Root ≈\", root)"
+      ]
+    }
+  ]
+}
