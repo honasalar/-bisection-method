@@ -2,7 +2,7 @@
 📌Bisection Method — Numerical Analysis 
 
 This project demonstrates how to find the root of a nonlinear equation using the Bisection Method.
-It is completed as an extra assignment for my Numerical Analysis course.
+It is completed as an  assignment for my Numerical Analysis course.
 
 🧠 About the Bisection Method
 
